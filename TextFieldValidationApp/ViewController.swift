@@ -38,6 +38,17 @@ class ViewController: UIViewController {
         textField.isSecureTextEntry = true
         return textField
     }()
+
+    lazy var errorLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Oops, incorrect username or password!"
+        label.textColor = .white
+        label.backgroundColor = .red
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.alpha = 0
+        return label
+    }()
     
     lazy var submitButton: UIButton = {
         let button = UIButton(type: .system)
@@ -59,6 +70,7 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(passwordTextField)
         stackView.addArrangedSubview(submitButton)
+        stackView.addArrangedSubview(errorLabel)
     }
 
     func setupConstraints() {
@@ -68,7 +80,7 @@ class ViewController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
             emailTextField.heightAnchor.constraint(equalToConstant: 48),
             passwordTextField.heightAnchor.constraint(equalToConstant: 48),
-            submitButton.heightAnchor.constraint(equalToConstant: 48),
+            submitButton.heightAnchor.constraint(equalToConstant: 48)
         ])
     }
 
@@ -95,11 +107,14 @@ class ViewController: UIViewController {
                 case .loading:
                     self?.submitButton.isEnabled = false
                     self?.submitButton.setTitle("Loading..", for: .normal)
+                    self?.hideError(true)
                 case .success:
                     self?.showResultScreen()
                     self?.resetButton()
+                    self?.hideError(true)
                 case .failed:
                     self?.resetButton()
+                    self?.hideError(false)
                 case .none:
                     break
                 }
@@ -119,6 +134,10 @@ class ViewController: UIViewController {
     func showResultScreen() {
         let homeVC = ResultViewController()
         navigationController?.pushViewController(homeVC, animated: true)
+    }
+    
+    func hideError(_ isHidden: Bool) {
+        errorLabel.alpha = isHidden ? 0 : 1
     }
 }
 
