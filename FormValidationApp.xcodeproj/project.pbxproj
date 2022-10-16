@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8639C74528FAE97200B9354B /* TextFieldValidationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFieldValidationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8639C74528FAE97200B9354B /* FormValidationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormValidationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8639C74828FAE97200B9354B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8639C74A28FAE97200B9354B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8639C74C28FAE97200B9354B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		8639C73C28FAE97200B9354B = {
 			isa = PBXGroup;
 			children = (
-				8639C74728FAE97200B9354B /* TextFieldValidationApp */,
+				8639C74728FAE97200B9354B /* FormValidationApp */,
 				8639C74628FAE97200B9354B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		8639C74628FAE97200B9354B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8639C74528FAE97200B9354B /* TextFieldValidationApp.app */,
+				8639C74528FAE97200B9354B /* FormValidationApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8639C74728FAE97200B9354B /* TextFieldValidationApp */ = {
+		8639C74728FAE97200B9354B /* FormValidationApp */ = {
 			isa = PBXGroup;
 			children = (
 				8639C74828FAE97200B9354B /* AppDelegate.swift */,
@@ -70,15 +70,15 @@
 				8639C75328FAE97300B9354B /* LaunchScreen.storyboard */,
 				8639C75628FAE97300B9354B /* Info.plist */,
 			);
-			path = TextFieldValidationApp;
+			path = FormValidationApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8639C74428FAE97200B9354B /* TextFieldValidationApp */ = {
+		8639C74428FAE97200B9354B /* FormValidationApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8639C75928FAE97300B9354B /* Build configuration list for PBXNativeTarget "TextFieldValidationApp" */;
+			buildConfigurationList = 8639C75928FAE97300B9354B /* Build configuration list for PBXNativeTarget "FormValidationApp" */;
 			buildPhases = (
 				8639C74128FAE97200B9354B /* Sources */,
 				8639C74228FAE97200B9354B /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = TextFieldValidationApp;
+			name = FormValidationApp;
 			productName = TextFieldValidationApp;
-			productReference = 8639C74528FAE97200B9354B /* TextFieldValidationApp.app */;
+			productReference = 8639C74528FAE97200B9354B /* FormValidationApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8639C74028FAE97200B9354B /* Build configuration list for PBXProject "TextFieldValidationApp" */;
+			buildConfigurationList = 8639C74028FAE97200B9354B /* Build configuration list for PBXProject "FormValidationApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8639C74428FAE97200B9354B /* TextFieldValidationApp */,
+				8639C74428FAE97200B9354B /* FormValidationApp */,
 			);
 		};
 /* End PBXProject section */
@@ -296,7 +296,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TextFieldValidationApp/Info.plist;
+				INFOPLIST_FILE = FormValidationApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -308,7 +308,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.TextFieldValidationApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FormValidationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -324,7 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TextFieldValidationApp/Info.plist;
+				INFOPLIST_FILE = FormValidationApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -336,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.TextFieldValidationApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FormValidationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -347,7 +347,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8639C74028FAE97200B9354B /* Build configuration list for PBXProject "TextFieldValidationApp" */ = {
+		8639C74028FAE97200B9354B /* Build configuration list for PBXProject "FormValidationApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8639C75728FAE97300B9354B /* Debug */,
@@ -356,7 +356,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8639C75928FAE97300B9354B /* Build configuration list for PBXNativeTarget "TextFieldValidationApp" */ = {
+		8639C75928FAE97300B9354B /* Build configuration list for PBXNativeTarget "FormValidationApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8639C75A28FAE97300B9354B /* Debug */,
