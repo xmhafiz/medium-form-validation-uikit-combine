@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     var viewModel = LoginViewModel()
     var cancellables = Set<AnyCancellable>()
-    
+    // MARK: - UI
     lazy var stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 
     lazy var errorLabel: UILabel = {
         let label = UILabel()
-        label.text = "Oops, incorrect username or password!"
+        label.text = "Oops, incorrect email or password!"
         label.textColor = .white
         label.backgroundColor = .red
         label.textAlignment = .center
@@ -58,11 +58,12 @@ class ViewController: UIViewController {
         return button
     }()
 
+    // MARK: - Common cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
-        setupPublisher()
+        setupPublishers()
     }
 
     func setupViews() {
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(passwordTextField)
         stackView.addArrangedSubview(submitButton)
-        stackView.addArrangedSubview(errorLabel)
+        stackView.addArrangedSubview(errorLabel) // append the error label here
     }
 
     func setupConstraints() {
@@ -84,7 +85,8 @@ class ViewController: UIViewController {
         ])
     }
 
-    func setupPublisher() {
+    func setupPublishers() {
+        // update published variables once text changed for both text fields
         NotificationCenter.default
             .publisher(for: UITextField.textDidChangeNotification, object: emailTextField)
             .map { ($0.object as! UITextField).text ?? "" }
@@ -97,6 +99,7 @@ class ViewController: UIViewController {
             .assign(to: \.password, on: viewModel)
             .store(in: &cancellables)
         
+        // subscribers
         viewModel.isSubmitEnabled
             .assign(to: \.isEnabled, on: submitButton)
             .store(in: &cancellables)
@@ -131,10 +134,10 @@ class ViewController: UIViewController {
         submitButton.isEnabled = true
     }
 
-    func showResultScreen() {
-        let homeVC = ResultViewController()
-        navigationController?.pushViewController(homeVC, animated: true)
-    }
+func showResultScreen() {
+    let homeVC = ResultViewController()
+    navigationController?.pushViewController(homeVC, animated: true)
+}
     
     func hideError(_ isHidden: Bool) {
         errorLabel.alpha = isHidden ? 0 : 1

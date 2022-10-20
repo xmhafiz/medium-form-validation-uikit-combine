@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    enum LoginState {
+    enum ViewState {
         case loading
         case success
         case failed
@@ -17,7 +17,7 @@ class LoginViewModel: ObservableObject {
     }
     @Published var email = ""
     @Published var password = ""
-    @Published var state: LoginState = .none
+    @Published var state: ViewState = .none
     
     var isValidUsernamePublisher: AnyPublisher<Bool, Never> {
         $email
@@ -39,6 +39,7 @@ class LoginViewModel: ObservableObject {
 
     func submitLogin() {
         state = .loading
+        // hardcoded 2 seconds delay, to simulate request
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) { [weak self] in
             guard let self = self else { return }
             if self.isCorrectLogin() {

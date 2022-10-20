@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8639C74428FAE97200B9354B"
-               BuildableName = "TextFieldValidationApp.app"
+               BuildableName = "FormValidationApp.app"
                BlueprintName = "FormValidationApp"
                ReferencedContainer = "container:FormValidationApp.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8639C74428FAE97200B9354B"
-            BuildableName = "TextFieldValidationApp.app"
+            BuildableName = "FormValidationApp.app"
             BlueprintName = "FormValidationApp"
             ReferencedContainer = "container:FormValidationApp.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8639C74428FAE97200B9354B"
-            BuildableName = "TextFieldValidationApp.app"
+            BuildableName = "FormValidationApp.app"
             BlueprintName = "FormValidationApp"
             ReferencedContainer = "container:FormValidationApp.xcodeproj">
          </BuildableReference>
